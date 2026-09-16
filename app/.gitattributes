@@ -1,0 +1,5 @@
+* text=auto
+
+# Force LF for Docker-critical files
+Docker-backend/entrypoint.sh text eol=lf
+Docker-backend/Dockerfile text eol=lf

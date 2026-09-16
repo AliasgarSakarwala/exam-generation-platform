@@ -1,0 +1,11 @@
+root = true
+
+[*]
+end_of_line = crlf
+insert_final_newline = true
+
+[Docker-backend/entrypoint.sh]
+end_of_line = lf
+
+[Docker-backend/Dockerfile]
+end_of_line = lf
