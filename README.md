@@ -71,10 +71,4 @@ The GitHub Actions workflow (`.github/workflows/test.yml`) runs on push and pull
 
 Each variant always includes every question marked mandatory, then fills the remaining slots from the bank with a seeded shuffle so versions stay comparable in length and difficulty. Questions are grouped by topic tag; both the order of tags and the order within a tag are shuffled, so two students sitting together do not see the same sequence. Option order is shuffled with a deterministic RNG, which moves the correct letter (A/B/C/D) independently per version. The generator then compares answer keys pairwise: similarity is the fraction of positions that share the same letter. If any pair is more than 20% similar, it reassigns options on the offending variant, scoring candidate letters against every other version and keeping the assignment that maximizes disagreement. A short random pass breaks leftover runs of identical keys. A Laravel endpoint implements the same idea server-side (label rotation plus a retry loop against a configurable threshold, default 0.65).
 
-## Team
 
-Aliasgar Sakarwala, Ali Afoud, Sahil Chawla, Samyak Jain, Arjun Sampat, Christian Eziekwu, Cooper Ross.
-
-**My contribution:** Led UI/UX design; contributed frontend development of authentication, TA views, student roster, and analytics screens, plus Jest coverage.
-
-Planning notes, requirements, and the original milestone schedule live in the [project proposal](docs/PROPOSAL.md).
