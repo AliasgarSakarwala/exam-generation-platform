@@ -13,6 +13,8 @@ class DevSeeder extends Seeder
 
     public function run()
     {
+        $this->call(DemoSeeder::class);
+
         // Generate unique test identifiers
         $testSuffix = Str::random(6); // e.g. "x7j9k2"
         $testPrefix = 'test' . $testSuffix;
